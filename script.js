@@ -102,10 +102,10 @@ function divide(){
     if (!finished){
         if (number1 === ""){
             number1 = input.value;
-            operation = "+";
+            operation = "/";
             input.value = "";
         } else {
-            if (operation !== "+"){
+            if (operation !== "/"){
                 number2 = input.value;
                 if(operation === "+"){
                     input.value = parseFloat(number1) + parseFloat(number2);
@@ -123,8 +123,8 @@ function divide(){
                 operation = "/";
             }else if (!flag){
                 number2 = input.value;
-                input.value = parseFloat(number1) + parseFloat(number2);
-                number1 = parseFloat(number1) + parseFloat(number2);
+                input.value = parseFloat(number1) / parseFloat(number2);
+                number1 = parseFloat(number1) / parseFloat(number2);
                 flag = true;
             }
         }
